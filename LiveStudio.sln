@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveStudio.Migration", "src\LiveStudio.Migration\LiveStudio.Migration.csproj", "{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveStudio.Migration.Tests", "test\LiveStudio.Migration.Tests\LiveStudio.Migration.Tests.csproj", "{EB701468-20F2-4D38-A211-0FF30B078FEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB701468-20F2-4D38-A211-0FF30B078FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB701468-20F2-4D38-A211-0FF30B078FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB701468-20F2-4D38-A211-0FF30B078FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB701468-20F2-4D38-A211-0FF30B078FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
