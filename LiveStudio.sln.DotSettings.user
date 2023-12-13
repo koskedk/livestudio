@@ -1,9 +1,0 @@
-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f411b19_002D9eb2_002D4ba4_002Da042_002Deae62c7f6d95/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ChamberTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::EB701468-20F2-4D38-A211-0FF30B078FEE::net7.0::LiveStudio.Migration.Tests.Schema.ChamberTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::EB701468-20F2-4D38-A211-0FF30B078FEE::net7.0::LiveStudio.Migration.Tests.Schema.FieldTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::EB701468-20F2-4D38-A211-0FF30B078FEE::net7.0::LiveStudio.Migration.Tests.ComposerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::EB701468-20F2-4D38-A211-0FF30B078FEE::net7.0::LiveStudio.Migration.Tests.MakerTests.should_Make&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
