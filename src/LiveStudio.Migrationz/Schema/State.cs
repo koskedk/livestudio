@@ -1,4 +1,4 @@
-namespace LiveStudio.Migration.Schema;
+namespace LiveStudio.Migrationz.Schema;
 
 public enum State
 {

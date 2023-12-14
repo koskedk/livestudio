@@ -1,6 +1,6 @@
-﻿using LiveStudio.Migration.Schema;
+﻿using LiveStudio.Migrationz.Schema;
 
-namespace LiveStudio.Migration.Tests.Schema;
+namespace LiveStudio.Migrationz.Tests.Schema;
 
 [TestFixture]
 public class ChamberTests
@@ -8,7 +8,7 @@ public class ChamberTests
     [Test]
     public void should_Have_Id()
     {
-        var test = new Chamber("Test");
+        var test = new Chamber("DEMO","Test");
         Assert.That(test.Id,Is.Not.EqualTo(default(Guid)));
         Assert.That(test.State,Is.EqualTo(State.Added));
         Assert.That(test.Version,Is.EqualTo(0));
@@ -17,7 +17,7 @@ public class ChamberTests
     [Test]
     public void should_Add()
     {
-        var testKit = new Chamber("Kit");
+        var testKit = new Chamber("DEMO","Kit");
         
         testKit.Add("Name",FieldType.String);
         testKit.Add("Expiry",FieldType.Date);
@@ -30,7 +30,7 @@ public class ChamberTests
     [Test]
     public void should_UpdateTo()
     { 
-        var testKit = new Chamber("Kit");
+        var testKit = new Chamber("DEMO","Kit");
         testKit.Add("Name",FieldType.String);
         testKit.Add("Expiry",FieldType.Date);
 

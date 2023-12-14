@@ -1,12 +1,16 @@
-﻿namespace LiveStudio.Migration.Schema;
+﻿namespace LiveStudio.Migrationz.Schema;
 
 public class Chamber
 {
     private readonly List<Field> _fields = new();
     public Guid Id { get; private set; }
+    public string Schema { get; private set; }
     public string Name { get; private set; }
     public State State { get; private set; }
     public int Version { get; private set; }
+    public DateTime  VersionDate { get; private set; }
+    public string AssemblyName => $"{Schema}{Name}";
+    public string MigrationName => $"{AssemblyName}Migration";
     public IReadOnlyCollection<Field> Fields => _fields;
 
     private Chamber()
@@ -14,12 +18,14 @@ public class Chamber
         Id = Guid.NewGuid();
         State = State.Added;
         Version = 0;
+        VersionDate=DateTime.Now;
         InitDefaultFields();
     }
 
-    public Chamber(string name)
+    public Chamber(string schema,string name)
         :this()
     {
+        Schema = schema;
         Name = name;
     }
 
@@ -54,6 +60,7 @@ public class Chamber
                 throw new Exception($"Field {name} already exists");
             field.ChangeName(name);
             this.State = State.Changed;
+            VersionDate=DateTime.Now;
             Version = nextVersion;
         }    
          
@@ -61,9 +68,27 @@ public class Chamber
         {
             field.ChangeType(type);
             this.State = State.Changed;
+            VersionDate=DateTime.Now;
             Version = nextVersion;
         }
-    } 
+    }
+
+    public string[] GetModelRefs()
+    {
+        return new[]
+            { typeof(System.ComponentModel.DataAnnotations.KeyAttribute).Assembly.Location };
+    }
+
+    public string[] GetMgsRefs()
+    {
+        return new[]
+        {
+            typeof(System.ComponentModel.DataAnnotations.KeyAttribute).Assembly.Location,
+            typeof(FluentMigrator.Migration).Assembly.Location
+        };
+    }
+
+
     private bool FieldExists(string name)
     {
         return _fields.Any(x => x.Name.ToLower().Equals(name.ToLower().Trim()));

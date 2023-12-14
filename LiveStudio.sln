@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveStudio.Migration", "src\LiveStudio.Migration\LiveStudio.Migration.csproj", "{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveStudio.Migrationz", "src\LiveStudio.Migrationz\LiveStudio.Migrationz.csproj", "{6EBC7C32-5E41-40B9-9CF0-42CB68361F47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveStudio.Migration.Tests", "test\LiveStudio.Migration.Tests\LiveStudio.Migration.Tests.csproj", "{EB701468-20F2-4D38-A211-0FF30B078FEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveStudio.Migrationz.Tests", "test\LiveStudio.Migrationz.Tests\LiveStudio.Migrationz.Tests.csproj", "{EB701468-20F2-4D38-A211-0FF30B078FEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

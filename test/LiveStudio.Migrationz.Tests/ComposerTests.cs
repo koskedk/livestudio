@@ -1,6 +1,7 @@
-using LiveStudio.Migration.Schema;
+using LiveStudio.Migrationz.Schema;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace LiveStudio.Migration.Tests;
+namespace LiveStudio.Migrationz.Tests;
 
 [TestFixture]
 public class ComposerTests
@@ -11,9 +12,9 @@ public class ComposerTests
     [SetUp]
     public void SetUp()
     {
-        _composer = new Composer();
+        _composer = TestInitializer.ServiceProvider.GetRequiredService<IComposer>();
         
-        _chamber = new Chamber("Kit");
+        _chamber = new Chamber("DEMO","Kit");
         _chamber.Add("Name",FieldType.String);
         _chamber.Add("Expiry",FieldType.Date);
     }
@@ -28,6 +29,8 @@ public class ComposerTests
     [Test]
     public void should_ComposeMigration()
     {
-        Assert.That(_composer.ComposeMigration(_chamber),Is.Not.Empty);
+        var def = _composer.ComposeMigration(_chamber);
+        Assert.That(def,Is.Not.Empty);
+        Console.WriteLine(def);
     }
 }

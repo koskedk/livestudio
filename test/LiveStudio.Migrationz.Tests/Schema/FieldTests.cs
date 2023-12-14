@@ -1,6 +1,6 @@
-using LiveStudio.Migration.Schema;
+using LiveStudio.Migrationz.Schema;
 
-namespace LiveStudio.Migration.Tests.Schema;
+namespace LiveStudio.Migrationz.Tests.Schema;
 
 [TestFixture]
 public class FieldTests
