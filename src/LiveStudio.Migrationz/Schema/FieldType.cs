@@ -1,6 +1,6 @@
 namespace LiveStudio.Migrationz.Schema;
 
 public enum FieldType
-{
-    String,Numeric,Date,Boolean,Guid,Key
-}
+ {
+     String,Numeric,Decimal,Date,Boolean,Guid,Key
+ }

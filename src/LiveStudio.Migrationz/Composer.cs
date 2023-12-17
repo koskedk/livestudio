@@ -1,5 +1,4 @@
 using System.Text;
-using System.ComponentModel.DataAnnotations;
 using LiveStudio.Migrationz.Schema;
 
 namespace LiveStudio.Migrationz;
@@ -63,7 +62,8 @@ public class Composer : IComposer
             { FieldType.Key, "Guid" },
             { FieldType.Guid, "Guid?" },
             { FieldType.String, "string?" },
-            { FieldType.Numeric, "decimal?" },
+            { FieldType.Numeric, "long?" },
+            { FieldType.Decimal, "decimal?" },
             { FieldType.Date, "DateTime?" },
             { FieldType.Boolean, "bool?" }
         };
@@ -74,7 +74,8 @@ public class Composer : IComposer
         return new Dictionary<FieldType, string>
         {
             { FieldType.Key, $" .WithColumn(\"Id\").AsGuid().PrimaryKey()" },
-            { FieldType.Numeric, $" .WithColumn(\"{col}\").AsDecimal().Nullable()" },
+            { FieldType.Numeric, $" .WithColumn(\"{col}\").AsInt64().Nullable()" },
+            { FieldType.Decimal, $" .WithColumn(\"{col}\").AsDecimal().Nullable()" },
             { FieldType.Date, $" .WithColumn(\"{col}\").AsDateTime2().Nullable()" },
             { FieldType.Boolean, $" .WithColumn(\"{col}\").AsBoolean().Nullable()" },
             { FieldType.String, $" .WithColumn(\"{col}\").AsString().Nullable()" }
